@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Housemate from "./Housemate";
+import Leaderboard from "./Leaderboard";
 
 //The Housemates
 const staticHousemates = [
@@ -43,6 +44,7 @@ export default function Voting() {
   const HouseMate = staticHousemates.map((mates) => (
     <div key={mates.id} className="col-md-6">
       <Housemate
+        votes={mates.votes}
         housemate={mates} // props passed down to the Housemate component
         onVote={() => upVote(mates)}
         downVote={() => downVote(mates)}

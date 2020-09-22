@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function Housemate({ housemate, onVote, downVote }) {
+export default function Housemate({ votes, housemate, onVote, downVote }) {
   //State for each housemate vote
-  const [votes, setVotes] = useState(housemate.votes);
+  // const [votes, setVotes] = useState(housemate.votes);
 
   return (
     <div className="housemate">
@@ -24,7 +24,6 @@ export default function Housemate({ housemate, onVote, downVote }) {
               type="text"
               className="housemate__vote__count"
               value={votes}
-              onChange={(e) => setVotes(e.target.value)}
             />
 
             <div className="housemate__vote__divider" />
